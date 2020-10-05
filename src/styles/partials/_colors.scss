@@ -1,0 +1,80 @@
+$color-white: #ffffff;
+
+$color-bg: #f4f3fa;
+$color-gray1: #edf0f4;
+$color-gray2: #dee2eb;
+$color-gray3: #d2d7e2;
+$color-gray4: #999fb0;
+$color-text: #5e677d;
+$color-text-dark: #253359;
+
+
+$color-primary: #1abff3;
+
+
+$color-red: #ff2168;
+$color-danger: $color-red;
+$color-coral: #ff7c60;
+$color-yellow: #ffcf78;
+$color-green: #05e4d7;
+$color-blue: #1969E1;
+
+// $theme: (
+//     'color-bg': $color-bg,
+//     'color-gray1': $color-gray1,
+//     'color-gray2': $color-gray2,
+//     'color-gray3': $color-gray3,
+//     'color-gray4': $color-gray4,
+//     'color-text': $color-text,
+//     'color-text-dark': $color-text-dark
+// );
+
+$colors: (
+    'primary',
+    'secondary',
+    'gray1',
+    'gray2',
+    'gray3',
+    'gray4',
+    'text',
+    'text-dark',
+    'danger',
+    'warning',
+    'success',
+    'info'
+);
+
+@each $color in $colors {
+    .bg-color-#{$color} {
+        background-color: var(--#{$color}) !important;
+        color: white;
+    }
+    .#{$color}-color {
+        color: var(--#{$color}) !important;
+    }
+}
+@for $i from 1 to 5 {
+    .bg-color-gray#{$i} {
+        color: var(--text-dark);
+    }
+}
+
+:root {
+    --primary: #1abff3;
+    --secondary: #FF7C60;
+    --gray1: #edf0f4;
+    --gray2: #dee2eb;
+    --gray3: #d2d7e2;
+    --gray4: #999fb0;
+    --text: #5e677d;
+    --text-dark: #253359;
+
+    --danger: #ff2168;
+    --warning: #ffcf78;
+    --success: #05e4d7;
+    --info: #1969E1;
+
+    --light: white,
+    --bg: #f4f3fa
+}
+
