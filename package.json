@@ -2,7 +2,7 @@
   "name": "bluecore-react-ui",
   "version": "1.0.0",
   "description": "",
-  "author": "",
+  "author": "bluecore",
   "license": "MIT",
   "repository": "/bluecore-react-ui",
   "main": "dist/index.js",
@@ -50,7 +50,9 @@
     "dist"
   ],
   "dependencies": {
+    "@iconscout/react-unicons": "^1.1.5",
     "feather-icons": "^4.28.0",
-    "rollup-plugin-postcss": "^3.1.8"
+    "react-calendar": "^3.1.0",
+    "react-datepicker": "^3.3.0"
   }
 }

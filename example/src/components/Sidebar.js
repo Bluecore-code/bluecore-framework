@@ -25,6 +25,7 @@ export default function Sidebar() {
                     <li><a href="#checkboxes">Checkbox</a></li>
                     <li><a href="#radios">Radio</a></li>
                     <li><a href="#switches">Switch</a></li>
+                    <li><a href="#datepickers">Datepicker</a></li>
                     <li><a href="#form">Form</a></li>
                 </ul>
                 <ul>

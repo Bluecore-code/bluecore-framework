@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Grid } from 'bluecore-react-ui';
+import { TextField, Flex } from 'bluecore-react-ui';
 
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import jsx from 'refractor/lang/jsx.js'
@@ -27,7 +27,7 @@ export default function Inputs() {
             <h4>TextField/ Inputs</h4>
             <div className="example">
                 <div className="design">
-                    <Grid wrap gap={30}>
+                    <Flex wrap gap={30}>
                         <TextField
                             disabled
                             id="standard-disabled"
@@ -72,7 +72,7 @@ export default function Inputs() {
                             onChange={e => setHintField(e.target.value)}
                             hintText="Some important text"
                         />
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
                     {`<TextField disabled id="standard-disabled" label="Disabled" defaultValue="Hello World" />
@@ -93,7 +93,7 @@ export default function Inputs() {
             <h4>Validate</h4>
             <div className="example">
                 <div className="design">
-                    <Grid wrap gap={30}>
+                    <Flex wrap gap={30}>
                         <TextField
                             required
                             id="standard-required"
@@ -132,7 +132,7 @@ export default function Inputs() {
                             onChange={e => setRequiredEmail(e.target.value)}
                             errorText="Invalid Email"
                             required />
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
                     {`<TextField

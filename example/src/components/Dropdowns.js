@@ -3,7 +3,7 @@ import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'refractor/lang/jsx.js';
 import prism from 'react-syntax-highlighter/dist/cjs/styles/prism/material-light';
 
-import { Dropdown, Grid, Button } from 'bluecore-react-ui'
+import { Dropdown, Flex, Button } from 'bluecore-react-ui'
 
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
@@ -24,7 +24,7 @@ export default function Dropdowns() {
             <h4>Dropdown</h4>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Dropdown items={items} onClick={clickItem} y="top" x="left">
                             <Button>Dropdown Top/Left</Button>
                         </Dropdown>
@@ -37,7 +37,7 @@ export default function Dropdowns() {
                         <Dropdown items={items} onClick={clickItem} y="bottom" x="right">
                             <Button color="danger">Dropdown Bottom/Right</Button>
                         </Dropdown>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
 {`<Dropdown items={items} onClick={clickItem} y="top" x="left">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Dialog, DialogHeader, DialogContent, DialogFooter, Grid, Button } from 'bluecore-react-ui'
+import { Dialog, DialogHeader, DialogContent, DialogFooter, Flex, Button } from 'bluecore-react-ui'
 
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import jsx from 'refractor/lang/jsx.js'
@@ -29,9 +29,9 @@ export default function Dialogs() {
             <h4>Dialog</h4>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Button color="primary" onClick={handleClickOpen}>Dialog Small</Button>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
 {`<Dialog open={openSm} size="sm" onClose={handleClose}>
@@ -48,9 +48,9 @@ export default function Dialogs() {
             </div>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Button color="primary" onClick={() => setOpenMd(true)}>Dialog Medium</Button>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
 {`<Dialog open={openMd} size="md" onClose={() => setOpenMd(false)}>
@@ -64,9 +64,9 @@ export default function Dialogs() {
             </div>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Button color="primary" onClick={() => setOpenLg(true)}>Dialog Large</Button>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
 {`<Dialog open={openLg} size="lg">
@@ -83,9 +83,9 @@ export default function Dialogs() {
             </div>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Button color="primary" onClick={() => setOpenFull(true)}>Dialog Full Width</Button>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
 {`<Dialog open={openFull} size="full">
@@ -102,9 +102,9 @@ export default function Dialogs() {
             </div>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Button color="primary" onClick={() => setOpenScrollable(true)}>Dialog Scrollable</Button>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
 {`<Dialog open={openScrollable} size="md" scrollable>

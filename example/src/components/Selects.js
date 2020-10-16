@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Select, Grid } from 'bluecore-react-ui'
+import { Select, Flex } from 'bluecore-react-ui'
 
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import jsx from 'refractor/lang/jsx.js'
@@ -50,7 +50,7 @@ export default function Selects() {
             <h4>Select</h4>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap>
+                    <Flex gap={30} wrap>
                         <Select
                             label="Default"
                             id="select1"
@@ -90,7 +90,7 @@ export default function Selects() {
                             required
                         >
                         </Select>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
                     {`<Select
@@ -132,6 +132,32 @@ export default function Selects() {
     required
 >
 </Select>`}
+                </SyntaxHighlighter>
+            </div>
+            <h4>Multi-Select</h4>
+            <div className="example">
+                <div className="design">
+                    <Flex>
+                        <Select
+                            label="Default"
+                            id="multiple1"
+                            value={age}
+                            options={options}
+                            values={e => console.log(e)}
+                            multiple
+                        >
+                        </Select>
+                    </Flex>
+                </div>
+                <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
+{`<Select
+    label="Default"
+    id="multiple1"
+    value={age}
+    options={options}
+    values={e => console.log(e)}
+    multiple
+>`}
                 </SyntaxHighlighter>
             </div>
         </div>

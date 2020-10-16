@@ -6,8 +6,8 @@ export { default as Badge } from './components/Badge';
 export { default as Button } from './components/Button';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Container } from './components/Container';
+export { default as Datepicker } from './components/Datepicker';
 export { default as Divider } from './components/Divider';
-export { default as Dropdown } from './components/Dropdown';
 
 export { default as Icon } from './components/Icon';
 export { default as PopOver } from './components/PopOver';
@@ -24,6 +24,8 @@ export { default as TextField } from './components/TextField';
 export { default as Tooltip } from './components/Tooltip';
 export { default as Typography } from './components/Typography';
 
+export { Dropdown as Dropdown } from './components/Dropdown';
+export { DropdownItem as DropdownItem } from './components/Dropdown';
 
 
 export { Card as Card } from './components/Card';
@@ -31,7 +33,7 @@ export { CardHeader as CardHeader } from './components/Card';
 export { CardContent as CardContent } from './components/Card';
 export { CardFooter as CardFooter } from './components/Card';
 
-export { Grid as Grid } from './components/Grid';
+export { Flex as Flex } from './components/Grid';
 export { Row as Row } from './components/Grid';
 export { Column as Column } from './components/Grid';
 

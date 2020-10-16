@@ -4,10 +4,11 @@ import jsx from 'refractor/lang/jsx.js';
 import prism from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
 
 import {
-  Button, Grid,
+  Button, Flex,
   PopOver,
   Slick, Slideshow, Tooltip, Typography, Icon,
-  List, ListItem
+  List, ListItem,
+  Datepicker
 } from 'bluecore-react-ui'
 
 import Buttons from './components/Buttons'
@@ -38,7 +39,7 @@ function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
-      <Grid>
+      <Flex>
         <Sidebar />
         <div className="content">
           <section id="start">
@@ -80,6 +81,20 @@ export default class Example extends Component {
             <Checkboxes />
             <Radios />
             <Switches />
+            <div id="datepickers">
+              <h4>Datepicker</h4>
+              <div className="example">
+                <div className="design">
+                  <Datepicker />
+                </div>
+              </div>
+              <h4>Periodo</h4>
+              <div className="example">
+                <div className="design">
+                  <Datepicker range />
+                </div>
+              </div>
+            </div>
             {/* <Forms /> */}
           </section>
 
@@ -150,7 +165,7 @@ export default class Example extends Component {
             <Pretexts />
           </section>
         </div>
-      </Grid>
+      </Flex>
 
     </div>
   );

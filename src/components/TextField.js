@@ -51,6 +51,7 @@ export default class TextField extends Component {
               placeholder={this.props.label} 
               value={this.props.defaultValue}
               onChange={this.props.onChange}
+              onClick={this.props.onClick}
               onBlur={this.props.required ? (e) => this.handleBlur(e.target.value) : null}
              />
           </div>

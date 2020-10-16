@@ -4,7 +4,7 @@ import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import jsx from 'refractor/lang/jsx.js'
 import prism from 'react-syntax-highlighter/dist/cjs/styles/prism/material-light'
 
-import { Grid, Card, CardHeader, CardContent, CardFooter, Button, Avatar, Icon } from 'bluecore-react-ui'
+import { Flex, Card, CardHeader, CardContent, CardFooter, Button, Avatar, Icon } from 'bluecore-react-ui'
 
 SyntaxHighlighter.registerLanguage('jsx', jsx)
 
@@ -14,15 +14,15 @@ export default function Cards() {
             <h4>Card</h4>
             <div className="example">
                 <div className="design">
-                    <Grid center>
+                    <Flex center>
                         <Card width={350}>
                             <CardHeader>
-                                <Grid gap={10}>
+                                <Flex gap={10}>
                                     <Avatar />
                                     <div>
                                         <p style={{fontWeight:'bold'}}>John Doe</p>
                                     </div>
-                                </Grid>
+                                </Flex>
                                 <Button rounded variant="onlytext" color="gray4">
                                     <Icon name="more-vertical" size={18}/>
                                 </Button>
@@ -35,17 +35,17 @@ export default function Cards() {
                                 <Button size="small" color="primary" variant="onlytext">Learn More</Button>
                             </CardFooter>
                         </Card>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
 {`<Card width={350}>
     <CardHeader>
-        <Grid gap={10}>
+        <Flex gap={10}>
             <Avatar />
             <div>
                 <p style={{fontWeight:'bold'}}>John Doe</p>
             </div>
-        </Grid>
+        </Flex>
         <Button rounded variant="onlytext" color="gray4">
             <Icon name="more-vertical" size={18}/>
         </Button>

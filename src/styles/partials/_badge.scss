@@ -107,17 +107,17 @@
 
 .badge{
     display: inline-flex;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     font-size: 1rem;
     border-radius: 2rem;
-    background-color: $color-gray2;
-    color: $color-text;
-    min-width: 24px;
-    line-height: 24px;
-    justify-content: center;
+    background-color: #dee2eb;
+    color: #5e677d;
+    width: 26px;
     box-sizing: border-box;
     flex-grow: 0;
-    line-height: 1;
+    height: 26px;
+    align-items: center;
+    justify-content: center;
     &.ghost{
         min-width: 26px;
         line-height: 24px;
@@ -127,6 +127,9 @@
         min-width: 20px;
         font-size: .875rem;
         padding: 0 .2rem;
+        &.ghost{
+            min-width: 22px;
+        }
     }
     // loop para alterar cor
     @each $color in $colors {

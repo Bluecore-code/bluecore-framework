@@ -17,6 +17,19 @@ class Snackbar extends Component {
     console.log(event.target.parentElement)
     event.target.parentElement.parentElement.remove()
   }
+
+  componentDidUpdate() {
+    this.controlSnackbars();
+  }
+  controlSnackbars() {
+    let snackbars = document.querySelectorAll('.snackbar');
+    for (let i = 0; i < snackbars.length; i++) {
+        snackbars[i].addEventListener('animationend', (e) => {
+            e.target.remove();
+        });
+    }
+  }
+
   render() {
     return (
       <div className={`snackbar ${this.props.item.type}`}>

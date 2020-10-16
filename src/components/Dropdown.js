@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export default class Dropdown extends Component {
+class Dropdown extends Component {
 
     state = {
         active: false,
@@ -43,28 +43,44 @@ export default class Dropdown extends Component {
                     onClick={() => this.toggleClass()}>
                     {this.props.children}
                 </span>
-                <div className="dropdown-content"
-                >
-                    {/* Subheader */}
-                    {this.props.title && <div className="subheader">{this.props.title}</div>}
-                    {/* Dropdown items */}
-                    {
-                        this.props.items &&
-                        this.props.items.map(
-                            (item, index) => {
-                                return (
-                                    <div key={index} onClick={this.props.onClick} className={`dropdown-content-item ${item.color}`}>
-                                        <span className="dropdown-item-icon">
-                                            <i className={`feather ${item.icon}`}></i>
-                                        </span>
-                                        {item.name}
-                                    </div>
-                                );
-                            }
-                        )
-                    }
-                </div>
+                {this.props.items &&
+                    <div className="dropdown-content">
+                        {/* Subheader */}
+                        {this.props.title && <div className="subheader">{this.props.title}</div>}
+                        {/* Dropdown items */}
+                        {
+                            this.props.items &&
+                            this.props.items.map(
+                                (item, index) => {
+                                    return (
+                                        <div key={index} onClick={this.props.onClick} className={`dropdown-content-item ${item.color}`}>
+                                            <span className="dropdown-item-icon">
+                                                <i className={`feather ${item.icon}`}></i>
+                                            </span>
+                                            {item.name}
+                                        </div>
+                                    );
+                                }
+                            )
+                        }
+                    </div>
+                }
             </span>
         )
     }
+}
+
+class DropdownItem extends Component {
+    render() {
+        return (
+            <div className="dropdown-content">
+                {this.props.children}
+            </div>
+        )
+    }
+}
+
+export {
+    Dropdown,
+    DropdownItem
 }

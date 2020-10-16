@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SnackbarGroup, Snackbar, Button, Grid } from 'bluecore-react-ui'
+import { SnackbarGroup, Snackbar, Button, Flex } from 'bluecore-react-ui'
 
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import jsx from 'refractor/lang/jsx.js'
@@ -23,9 +23,9 @@ export default function Snackbars() {
             <h4>Snackbar</h4>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Button onClick={_ => setShowSnackbar(true)} color="primary">Show Snackbar</Button>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
                     {`<Button onClick={_ => setShowSnackbar(true)} color="primary">Show Snackbar</Button>
@@ -39,13 +39,13 @@ export default function Snackbars() {
             <h4>Dynamic Snackbar</h4>
             <div className="example">
                 <div className="design">
-                    <Grid gap={30} wrap center>
+                    <Flex gap={30} wrap center>
                         <Button onClick={_ => addSnackbar()}>Add Snackbar</Button>
                         <Button onClick={_ => addSnackbar('success')}>Add Success Snackbar</Button>
                         <Button onClick={_ => addSnackbar('error')}>Add Danger Snackbar</Button>
                         <Button onClick={_ => addSnackbar('info')}>Add Info Snackbar</Button>
                         <Button onClick={_ => addSnackbar(null, 'info')}>Add Icon Snackbar</Button>
-                    </Grid>
+                    </Flex>
                 </div>
                 <SyntaxHighlighter showLineNumbers showInlineLineNumbers language="jsx" style={prism} customStyle={{ padding: '1.5em 2em', fontSize: '12px' }}>
                     {`export default class Example extends Component {

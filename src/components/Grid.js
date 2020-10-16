@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-class Grid extends Component {
+class Flex extends Component {
 
     static defaultProps = {
         className: '',
@@ -17,7 +17,7 @@ class Grid extends Component {
         }
 
         var liClasses = classNames({
-            'grid d-flex': true,
+            'd-flex': true,
             [this.props.className]: this.props.className,
         });
 
@@ -84,7 +84,7 @@ class Column extends Component {
 }
 
 export {
-    Grid,
+    Flex,
     Row,
     Column
 };
